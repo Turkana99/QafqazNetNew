@@ -1,0 +1,159 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #514a9d, #24c6dc);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/overlay.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.logo {
+  width: 200px;
+  height: 80px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 212px);
+}
+
+.message {
+  text-align: center;
+  color: white;
+}
+
+.message h1 {
+  font-size: 96px;
+  font-family: "Inter", sans-serif;
+}
+
+.message p {
+  font-size: 34px;
+  font-family: "Inter", sans-serif;
+  line-height: 35px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+}
+
+.info {
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  gap: 8px;
+}
+
+.info p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.copyRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .message h1 {
+    font-size: 80px;
+  }
+  .message p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .message h1 {
+    font-size: 60px;
+  }
+  .message p {
+    font-size: 24px;
+  }
+  .logo {
+    width: 150px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .message h1 {
+    font-size: 48px;
+  }
+
+  .message p {
+    font-size: 20px;
+  }
+
+  .footer .nav {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 130px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .message h1 {
+    font-size: 36px;
+  }
+
+  .message p {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 40px;
+  }
+
+}

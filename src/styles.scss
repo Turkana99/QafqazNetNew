@@ -1,0 +1,214 @@
+@import url("assets/css/all.min.css");
+@import url("assets/css/fontawesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+html,
+body {
+  height: 100%;
+  background-color: #171a39 !important;
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.custom-button {
+  --button-bg: #17d386;
+  --button-color: white;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 40px;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-bg);
+  white-space: nowrap;
+
+  i {
+    color: var(--button-color);
+    font-size: 24px;
+  }
+
+  &:hover {
+    color: var(--button-bg);
+    background-color: var(--button-color);
+    & > i {
+      color: var(--button-bg);
+    }
+  }
+  &.transparent-btn {
+    background-color: transparent;
+    color: var(--button-bg);
+
+    i {
+      color: var(--button-bg);
+    }
+
+    &:hover {
+      background-color: var(--button-bg);
+      color: var(--button-color);
+
+      & > i {
+        color: var(--button-color);
+      }
+    }
+  }
+}
+
+.transparent-btn2 {
+  --button-bg: #17d386;
+  --button-color: white;
+  --transitionDelay: 250ms;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 40px;
+  color: var(--button-color);
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  white-space: nowrap;
+  transition: border var(--transitionDelay), color var(--transitionDelay);
+
+  i {
+    position: relative;
+    left: 0;
+    color: var(--button-color);
+    transition: color var(--transitionDelay), left var(--transitionDelay) linear;
+  }
+
+  &:hover {
+    border: 1px solid var(--button-bg);
+    color: var(--button-bg);
+
+    & > i {
+      color: var(--button-bg);
+      left: 6px;
+    }
+  }
+}
+
+.language-menu {
+  --background-color: #3a3c57;
+
+  background-color: var(--background-color) !important;
+  border-radius: 20px !important;
+  width: max-content !important;
+  button {
+    span {
+      color: white !important;
+      display: flex !important;
+      justify-content: center !important;
+      font-weight: 300;
+    }
+  }
+}
+
+.service-card {
+  --animationDelay: 250ms;
+  border: 1px solid #585a71;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #2e314d;
+  user-select: none;
+  cursor: context-menu;
+  transition: border var(--animationDelay),
+    background-color var(--animationDelay);
+  height: 100%;
+
+  p {
+    font-size: 16px;
+    font-weight: 200;
+  }
+  &:hover {
+    background-color: #3a3c56;
+    border: 1px solid #17d386;
+  }
+
+  i {
+    color: #17d386;
+    font-size: 30px;
+  }
+}
+
+.news-card {
+  --animationDelay: 250ms;
+  position: relative;
+  bottom: 0;
+  transition: bottom var(--animationDelay);
+  border: 1px solid #585a71;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  user-select: none;
+  cursor: pointer;
+  height: 100%;
+  background: linear-gradient(
+    123.63deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  p {
+    font-weight: 200;
+  }
+  &:hover {
+    bottom: 10px;
+    button {
+      background-color: white !important;
+    }
+    button i {
+      color: #171a39 !important;
+    }
+  }
+
+  .news-card-footer {
+    p {
+      margin: 0;
+      position: relative;
+      left: 10px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 3px;
+        background-color: white;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        border-radius: 10px;
+      }
+    }
+    button {
+      background-color: #6a6c80;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+      font-weight: 100;
+      transition: background-color var(--animationDelay);
+
+      i {
+        transition: color var(--animationDelay);
+      }
+    }
+  }
+}
