@@ -214,42 +214,42 @@
 </section>
 
 <!-- carousel start -->
-<p-carousel
-  [value]="reviews"
-  [numVisible]="1"
-  [numScroll]="1"
-  [circular]="true"
-  [autoplayInterval]="8000"
-  [responsiveOptions]="responsiveOptions"
->
-  <ng-template let-rew pTemplate="item">
-    <div class="border-1 surface-border border-round m-2 p-3">
-      <section class="container carousel-wrapper position-relative">
-        <div class="d-flex flex-column align-items-center">
-          <div class="img-wrapper mb-4">
-            <img [src]="rew.img" alt="" />
+<section class="container">
+  <p-carousel
+    [value]="reviews"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="8000"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-rew pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 p-3">
+        <section class="carousel-wrapper position-relative">
+          <div class="d-flex flex-column align-items-center">
+            <div class="img-wrapper mb-4">
+              <img [src]="rew.img" alt="" />
+            </div>
+            <div
+              class="content d-flex flex-column align-items-center justify-content-center"
+            >
+              <p class="name">{{ rew.fullname }}</p>
+              <p class="position m-0">{{ rew.position }}</p>
+            </div>
           </div>
-          <div
-            class="content d-flex flex-column align-items-center justify-content-center"
-          >
-            <p class="name">{{ rew.fullname }}</p>
-            <p class="position m-0">{{ rew.position }}</p>
-          </div>
-        </div>
-        <div class="content px-5 py-2 d-flex flex-column">
-          <i class="fa-solid fa-quote-left"></i>
-          <h4>{{ rew.message }}</h4>
-          <!-- <div class="nav-buttons">
+          <div class="content px-5 py-2 d-flex flex-column">
+            <i class="fa-solid fa-quote-left"></i>
+            <h4>{{ rew.message }}</h4>
+            <!-- <div class="nav-buttons">
           <i class="fa-solid fa-chevron-left"></i>
           <i class="fa-solid fa-chevron-right"></i>
         </div> -->
-        </div>
-      </section>
-    </div>
-  </ng-template>
-</p-carousel>
-
-
+          </div>
+        </section>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>
 
 <!-- carousel end -->
 

@@ -333,26 +333,41 @@ section {
 }
 
 /*Carousel style*/
-::ng-deep .p-carousel {
+::ng-deep .p-carousel-container {
   position: relative;
 }
+
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev,
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
   position: absolute;
   color: white;
   font-size: 30px !important;
+  z-index: 10;
+  user-select: none;
+  transition: color 200ms;
 }
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
-  top: 10%;
-  right: 18%;
+  top: 0;
+  right: 60px;
+
+  chevronlefticon svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
-  top: 10%;
-  right: 16%;
+  top: 0;
+  right: 0;
+
+  chevronrighticon svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
   background: transparent;
+  color: #17d386;
 }
 ::ng-deep .p-carousel .p-carousel-indicators {
   display: none !important;

@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+*:not(::ng-deep .p-carousel-next, ::ng-deep .p-carousel-prev) {
+  color: white;
+}
+
 .custom-button {
   --button-bg: #17d386;
   --button-color: white;

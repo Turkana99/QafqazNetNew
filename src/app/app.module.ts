@@ -13,9 +13,20 @@ import { ButtonModule } from 'primeng/button';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { OurServicesComponent } from './components/our-services/our-services.component';
+import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    MainComponent,
+    BreadcrumbComponent,
+    OurServicesComponent,
+    ServiceDetailComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

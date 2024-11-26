@@ -1,0 +1,12 @@
+section {
+  font-weight: 100;
+  font-size: 14px;
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:not(.active):hover {
+      color: #17d386;
+    }
+  }
+}
