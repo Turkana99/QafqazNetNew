@@ -9,8 +9,22 @@
       class="col-lg-6 col-12 order-lg-2 order-3 d-flex justify-content-center align-items-center"
     >
       <ul class="list-unstyled m-0 d-flex align-items-center">
-        <li><a href="#">Ana səhifə</a></li>
-        <li><a href="#">Xidmətlər</a></li>
+        <li>
+          <a
+            routerLink="main"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="router-link-active"
+            >Ana səhifə</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="services"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="router-link-active"
+            >Xidmətlər</a
+          >
+        </li>
         <li><a href="#">Məhsullar</a></li>
         <li><a href="#">Şirkət</a></li>
         <li><a href="#">Bloq</a></li>
