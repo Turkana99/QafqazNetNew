@@ -101,93 +101,16 @@
     </button>
   </div>
   <div class="row g-4">
-    <div class="col-4">
+    <div
+      class="col-4"
+      *ngFor="let service of ourServices"
+      [routerLink]="['/services', service.id]"
+    >
       <div class="service-card">
-        <i class="fa-regular fa-message"></i>
-        <h5 class="m-0">IT Konsaltinq</h5>
+        <i [class]="service.icon"></i>
+        <h5 class="m-0">{{ service.title }}</h5>
         <p>
-          Texnologiya investisiyalarınızı maksimuma çatdırmaq üçün mürəkkəb İT
-          mühitində ekspert rəhbərliyi əldə edin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-globe"></i>
-        <h5 class="m-0">İnfrastruktur və Şəbəkə</h5>
-        <p>
-          Şəbəkə performansınızı optimallaşdırmaq üçün təhlükəsiz, çevik və
-          etibarlı İT infrastrukturu dizayn edin və tətbiq edin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-cloud-arrow-up"></i>
-        <h5 class="m-0">Bulud Texnologiyaları</h5>
-        <p>
-          Biznes ehtiyaclarınıza uyğunlaşdırılmış miqyaslana bilən bulud həlləri
-          ilə əməliyyatlarınızı təkmilləşdirin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-database"></i>
-        <h5 class="m-0">Verilənlər Bazası və İnformasiya İdarəetməsi</h5>
-        <p>
-          Effektiv verilənlər bazası həlləri və informasiya idarəetməsi
-          xidmətləri ilə məlumat əməliyyatlarınızı səmərələşdirin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-lock"></i>
-        <h5 class="m-0">Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq</h5>
-        <p>
-          Təşkilatınızı güclü kiber təhlükəsizlik strategiyaları ilə qoruyun və
-          İT standartlarına uyğunluğu təmin edin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-code"></i>
-        <h5 class="m-0">Proqram Təminatı</h5>
-        <p>
-          Fikirlərinizi xüsusi proqram təminatı xidmətlərimizlə reallığa
-          çevirin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-server"></i>
-        <h5 class="m-0">Hosting və Veb Xidmətləri</h5>
-        <p>
-          Etibarlı hosting həlləri və hərtərəfli veb xidmətlərimizlə onlayn
-          mövcudluğunuzu gücləndirin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-        <h5 class="m-0">Dizayn və Vizualizasiya</h5>
-        <p>
-          Yaradıcı dizayn və vizualizasiya həllərimizlə konseptlərinizi həyata
-          keçirin.
-        </p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="service-card">
-        <i class="fa-solid fa-gears"></i>
-        <h5 class="m-0">Texniki Dəstək</h5>
-        <p>
-          İT sistemlərinizin fasiləsiz işləməsini təmin etmək üçün xüsusi
-          texniki dəstək xidmətlərimizdən yararlanın.
+          {{ service.description }}
         </p>
       </div>
     </div>
@@ -252,7 +175,6 @@
 </section>
 
 <!-- carousel end -->
-
 <section class="container news">
   <div class="w-100 d-flex justify-content-between align-items-center mb-5">
     <h4>Xəbərlər</h4>

@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { OurServicesComponent } from './components/our-services/our-services.component';
-import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
+import { MainComponent } from '../app/components/main/main.component';
+import { OurServicesComponent } from '../app/components/our-services/our-services.component';
+import { ServiceDetailComponent } from '../app/components/service-detail/service-detail.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full',
+  },
   {
     path: 'main',
     component: MainComponent,
@@ -17,6 +22,7 @@ const routes: Routes = [
     path: 'services/:id',
     component: ServiceDetailComponent,
   },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

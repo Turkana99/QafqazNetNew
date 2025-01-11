@@ -6,6 +6,11 @@ import { ServiceDetailComponent } from './components/service-detail/service-deta
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo:'/main'
+  },
+  {
     path: 'main',
     component: MainComponent,
   },

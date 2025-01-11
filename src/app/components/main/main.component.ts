@@ -80,6 +80,77 @@ export class MainComponent implements OnInit {
     },
   ];
 
+  ourServices: {
+    id: number;
+    icon: string;
+    title: string;
+    description: string;
+  }[] = [
+    {
+      id: 1,
+      icon: 'fa-regular fa-message',
+      title: 'IT Konsaltinq',
+      description:
+        'Texnologiya investisiyalarınızı maksimuma çatdırmaq üçün mürəkkəb İT mühitində ekspert rəhbərliyi əldə edin.',
+    },
+    {
+      id: 2,
+      icon: 'fa-solid fa-globe',
+      title: 'İnfrastruktur və Şəbəkə',
+      description:
+        'Şəbəkə performansınızı optimallaşdırmaq üçün təhlükəsiz, çevik və etibarlı İT infrastrukturu dizayn edin və tətbiq edin.',
+    },
+    {
+      id: 3,
+      icon: 'fa-solid fa-cloud-arrow-up',
+      title: 'Bulud Texnologiyaları',
+      description:
+        'Biznes ehtiyaclarınıza uyğunlaşdırılmış miqyaslana bilən bulud həlləri ilə əməliyyatlarınızı təkmilləşdirin.',
+    },
+    {
+      id: 4,
+      icon: 'fa-solid fa-database',
+      title: 'Verilənlər Bazası və İnformasiya İdarəetməsi',
+      description:
+        'Effektiv verilənlər bazası həlləri və informasiya idarəetməsi xidmətləri ilə məlumat əməliyyatlarınızı səmərələşdirin.',
+    },
+    {
+      id: 5,
+      icon: 'fa-solid fa-lock',
+      title: 'Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq',
+      description:
+        'Təşkilatınızı güclü kiber təhlükəsizlik strategiyaları ilə qoruyun və İT standartlarına uyğunluğu təmin edin.',
+    },
+    {
+      id: 6,
+      icon: 'fa-solid fa-code',
+      title: 'Proqram Təminatı',
+      description:
+        'Fikirlərinizi xüsusi proqram təminatı xidmətlərimizlə reallığa çevirin.',
+    },
+    {
+      id: 7,
+      icon: 'fa-solid fa-server',
+      title: 'Hosting və Veb Xidmətləri',
+      description:
+        'Etibarlı hosting həlləri və hərtərəfli veb xidmətlərimizlə onlayn mövcudluğunuzu gücləndirin.',
+    },
+    {
+      id: 8,
+      icon: 'fa-solid fa-wand-magic-sparkles',
+      title: 'Dizayn və Vizualizasiya',
+      description:
+        'Yaradıcı dizayn və vizualizasiya həllərimizlə konseptlərinizi həyata keçirin.',
+    },
+    {
+      id: 9,
+      icon: 'fa-solid fa-gears',
+      title: 'Texniki Dəstək',
+      description:
+        'İT sistemlərinizin fasiləsiz işləməsini təmin etmək üçün xüsusi texniki dəstək xidmətlərimizdən yararlanın.',
+    },
+  ];
+
   ngOnInit(): void {
     this.responsiveOptions = [
       {
@@ -99,7 +170,6 @@ export class MainComponent implements OnInit {
       },
     ];
     this.startAutoScroll();
-    
   }
 
   startAutoScroll() {
@@ -115,6 +185,4 @@ export class MainComponent implements OnInit {
       }
     }, 3000); // Change every 3 seconds
   }
-
-
 }
