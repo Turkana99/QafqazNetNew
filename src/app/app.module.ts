@@ -16,6 +16,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
 import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ServiceDetailComponent } from './components/service-detail/service-deta
     BreadcrumbComponent,
     OurServicesComponent,
     ServiceDetailComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
