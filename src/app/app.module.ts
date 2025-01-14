@@ -18,6 +18,9 @@ import { OurServicesComponent } from './components/our-services/our-services.com
 import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { NewsComponent } from './components/news/news.component';
+import { PaginatorModule } from 'primeng/paginator';
+import { NewDetailsComponent } from './components/new-details/new-details.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { AboutComponent } from './components/about/about.component';
     ServiceDetailComponent,
     ContactComponent,
     AboutComponent,
+    NewsComponent,
+    NewDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import { AboutComponent } from './components/about/about.component';
     MaterialModule,
     CarouselModule,
     ButtonModule,
+    PaginatorModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

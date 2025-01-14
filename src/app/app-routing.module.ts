@@ -5,6 +5,8 @@ import { OurServicesComponent } from './components/our-services/our-services.com
 import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { NewsComponent } from './components/news/news.component';
+import { NewDetailsComponent } from './components/new-details/new-details.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'about-us',
     component: AboutComponent,
+  },
+  {
+    path: 'news',
+    component: NewsComponent,
+  },
+  {
+    path: 'news/:id',
+    component: NewDetailsComponent,
   },
 ];
 
