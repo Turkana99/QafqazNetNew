@@ -8,7 +8,7 @@ interface PageEvent {
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrl: './news.component.scss'
+  styleUrl: './news.component.scss',
 })
 export class NewsComponent {
   first: number = 0;
@@ -17,5 +17,5 @@ export class NewsComponent {
   onPageChange(event: any) {
     this.first = event.first;
     this.rows = event.rows;
-}
+  }
 }
