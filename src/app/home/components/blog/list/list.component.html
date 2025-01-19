@@ -1,0 +1,131 @@
+<section class="container blog mb-5">
+    <h4 class="mb-5">Bloq</h4>
+  
+    <div class="w-100 row filter-btns gx-3 gy-3 mb-4">
+      <div class="col-3" *ngFor="let item of filters">
+        <button
+          matRipple
+          class="w-100 active"
+          type="button"
+          [ngClass]="{ active: item.active }"
+          (click)="handleClick(item.key)"
+        >
+          {{ item.name }}
+        </button>
+      </div>
+    </div>
+  
+    <div class="row g-4 mb-5">
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="blog-card" [routerLink]="[1]">
+          <div class="blog-content p-4 pt-3">
+            <h3>Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər</h3>
+            <ul class="list-unstyled m-0 d-flex">
+              <li>Texnologiya</li>
+              <li>Araşdırma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="w-100">
+      <p-paginator
+        (onPageChange)="onPageChange($event)"
+        [first]="first"
+        [pageLinkSize]="6"
+        [rows]="rows"
+        [totalRecords]="120"
+        [showFirstLastIcon]="false"
+      />
+    </div>
+  </section>
+  

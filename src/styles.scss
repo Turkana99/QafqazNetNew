@@ -13,6 +13,10 @@ body {
   font-style: normal;
 }
 
+.cursor-pointer{
+  cursor:pointer !important
+}
+
 body {
   margin: 0;
 }
@@ -112,6 +116,23 @@ body {
       display: flex !important;
       justify-content: center !important;
       font-weight: 300;
+    }
+  }
+}
+
+.route-menu {
+  --background-color: #3a3c57;
+
+  background-color: var(--background-color) !important;
+  border-radius: 20px !important;
+  width: max-content !important;
+  button {
+    padding: 0 24px;
+    span {
+      color: white !important;
+      display: flex !important;
+      font-weight: 300;
+      font-size: 16px;
     }
   }
 }

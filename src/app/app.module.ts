@@ -7,20 +7,16 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material.module';
-import { MainComponent } from './components/main/main.component';
+import { MainComponent } from './home/components/main/main.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
-import { OurServicesComponent } from './components/our-services/our-services.component';
-import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './components/about/about.component';
-import { NewsComponent } from './components/news/news.component';
 import { PaginatorModule } from 'primeng/paginator';
-import { NewDetailsComponent } from './components/new-details/new-details.component';
+import { ProductsComponent } from './home/components/products/products.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +25,8 @@ import { NewDetailsComponent } from './components/new-details/new-details.compon
     FooterComponent,
     MainComponent,
     BreadcrumbComponent,
-    OurServicesComponent,
-    ServiceDetailComponent,
-    ContactComponent,
-    AboutComponent,
-    NewsComponent,
-    NewDetailsComponent,
+    ProductsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

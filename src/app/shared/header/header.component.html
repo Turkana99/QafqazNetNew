@@ -25,9 +25,42 @@
             >Xidmətlər</a
           >
         </li>
-        <li><a href="#">Məhsullar</a></li>
-        <li><a href="#">Şirkət</a></li>
-        <li><a href="#">Bloq</a></li>
+        <li>
+          <a
+            routerLink="products"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="router-link-active"
+            >Məhsullar</a
+          >
+        </li>
+        <li>
+          <a
+            [matMenuTriggerFor]="menu2"
+            [ngClass]="{ 'router-link-active': isCompanyRouteActive() }"
+            class="cursor-pointer"
+            >Şirkət</a
+          >
+
+          <mat-menu #menu2="matMenu" class="route-menu">
+            <button mat-menu-item [routerLink]="['company', 'about']">
+              <span>Haqqımızda</span>
+            </button>
+            <button mat-menu-item [routerLink]="['company', 'contact']">
+              <span>Əlaqə</span>
+            </button>
+            <button mat-menu-item [routerLink]="['company', 'news']">
+              <span>Xəbərlər</span>
+            </button>
+          </mat-menu>
+        </li>
+        <li>
+          <a
+            routerLink="blog"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="router-link-active"
+            >Bloq</a
+          >
+        </li>
       </ul>
     </div>
     <div

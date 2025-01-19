@@ -1,47 +1,53 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { OurServicesComponent } from './components/our-services/our-services.component';
-import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './components/about/about.component';
-import { NewsComponent } from './components/news/news.component';
-import { NewDetailsComponent } from './components/new-details/new-details.component';
+import { MainComponent } from './home/components/main/main.component';
+import { ProductsComponent } from './home/components/products/products.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/main',
+    redirectTo: '/home',
   },
   {
-    path: 'main',
-    component: MainComponent,
+    path: 'home',
+    component: HomeComponent,
+    data: { breadcrumb: 'Ana səhifə' },
+    children: [
+      {
+        path: '',
+        component: MainComponent,
+      },
+      {
+        path: 'products',
+        component: ProductsComponent,
+        data: { breadcrumb: 'Məhsullar' },
+      },
+      {
+        path: 'services',
+        loadChildren: () =>
+          import('./home/components/services/services.module').then(
+            (m) => m.ServicesModule
+          ),
+      },
+      {
+        path: 'company',
+        loadChildren: () =>
+          import('./home/components/company/company.module').then(
+            (m) => m.CompanyModule
+          ),
+      },
+      {
+        path: 'blog',
+        loadChildren: () =>
+          import('./home/components/blog/blog.module').then(
+            (m) => m.BlogModule
+          ),
+      },
+    ],
   },
-  {
-    path: 'services',
-    component: OurServicesComponent,
-  },
-  {
-    path: 'services/:id',
-    component: ServiceDetailComponent,
-  },
-  {
-    path: 'contact-us',
-    component: ContactComponent,
-  },
-  {
-    path: 'about-us',
-    component: AboutComponent,
-  },
-  {
-    path: 'news',
-    component: NewsComponent,
-  },
-  {
-    path: 'news/:id',
-    component: NewDetailsComponent,
-  },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
