@@ -1,155 +1,154 @@
 * {
-    color: white;
-  }
-  
-  p {
-    font-weight: 200;
-  }
-  
-  li {
-    font-weight: 200;
-  }
-  
-  section {
-    margin-bottom: 100px;
-  }
-  
-  h5 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 32px;
-  }
-  
-  .products {
-    font-weight: 200;
-  
-    .products-switch {
-      min-height: 80px;
-      padding: 16px 0;
-      gap: 16px;
-      user-select: none;
-      cursor: pointer;
-      border-bottom: 1px solid #ffffff33;
+  color: white;
+}
+
+p {
+  font-weight: 200;
+}
+
+li {
+  font-weight: 200;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.products {
+  font-weight: 200;
+
+  .products-switch {
+    min-height: 80px;
+    padding: 16px 0;
+    gap: 16px;
+    user-select: none;
+    cursor: pointer;
+    border-bottom: 1px solid #ffffff33;
+    h5 {
+      color: white;
+      transition: color 250ms ease;
+    }
+    i {
+      transform: rotate(0);
+      font-size: 30px;
+      transition: transform 250ms ease;
+    }
+
+    &.active {
       h5 {
-        color: white;
-        transition: color 250ms ease;
+        color: #17d386;
       }
       i {
-        transform: rotate(0);
-        font-size: 30px;
-        transition: transform 250ms ease;
-      }
-  
-      &.active {
-        h5 {
-          color: #17d386;
-        }
-        i {
-          transform: rotate(-45deg);
-          color: #17d386;
-        }
-      }
-    }
-  
-    .tab-section {
-      h5 {
-        font-weight: 400;
-      }
-  
-      .products-wrapper {
-        gap: 12px;
-  
-        .product {
-          height: 40px;
-          padding: 0 16px;
-          font-size: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid #ffffff33;
-          border-radius: 25px;
-        }
+        transform: rotate(-45deg);
+        color: #17d386;
       }
     }
   }
-  
-  form {
-    label {
-      color: white;
-      font-size: 14px;
-      font-weight: 300;
-      .required-mark {
-        color: red;
-        margin-left: 3px;
-      }
-    }
-  
-    .contact-form-control {
-      color: white;
-      outline: none;
-      padding: 10px;
-      background-color: transparent;
-      border: 1px solid #747688;
-      border-radius: 8px;
-      font-weight: 200;
-      margin-top: 10px;
-    }
-    .form-control,
-    .form-select {
-      color: white;
-      outline: none;
-      padding: 10px;
-      background-color: #171a39;
-      border: 1px solid #747688;
-      border-radius: 8px;
-      font-weight: 200;
-      margin-top: 10px;
-    }
-  }
-  
-  .contact-us {
+
+  .tab-section {
     h5 {
-      font-size: 24px;
+      font-weight: 400;
     }
-  }
-  
-  .contact-details {
-    background-color: #2e314d;
-    border-radius: 24px;
-    padding-left: 72px;
-    display: flex;
-    align-items: center;
-    span.required-mark {
-      color: red;
-    }
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      p {
-        font-weight: 400;
-        font-size: 20px;
-      }
-  
-      a {
+
+    .products-wrapper {
+      gap: 12px;
+
+      .product {
+        min-height: 40px;
+        padding: 5px 16px;
         font-size: 16px;
-        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 40px;
       }
     }
   }
-  
-  .send-button {
+}
+
+form {
+  label {
     color: white;
-    background-color: #17d386;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border: none;
-    border-radius: 24px;
-  
-    i {
-      margin-left: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    .required-mark {
+      color: red;
+      margin-left: 3px;
     }
   }
-  
+
+  .contact-form-control {
+    color: white;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #747688;
+    border-radius: 8px;
+    font-weight: 200;
+    margin-top: 10px;
+  }
+  .form-control,
+  .form-select {
+    color: white;
+    outline: none;
+    padding: 10px;
+    background-color: #171a39;
+    border: 1px solid #747688;
+    border-radius: 8px;
+    font-weight: 200;
+    margin-top: 10px;
+  }
+}
+
+.contact-us {
+  h5 {
+    font-size: 24px;
+  }
+}
+
+.contact-details {
+  background-color: #2e314d;
+  border-radius: 24px;
+  padding-left: 72px;
+  display: flex;
+  align-items: center;
+  span.required-mark {
+    color: red;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    p {
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.send-button {
+  color: white;
+  background-color: #17d386;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  border-radius: 24px;
+
+  i {
+    margin-left: 10px;
+  }
+}
