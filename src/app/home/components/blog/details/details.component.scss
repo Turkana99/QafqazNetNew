@@ -25,6 +25,7 @@
   
     .image-wrapper {
       height: 700px;
+      max-height: 60vh;
       background-image: url("/assets/images/blog-bg.png");
       background-repeat: no-repeat;
       background-size: cover;
