@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreadcrumbService } from '../../../../core/services/breadcrumb.service';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrl: './details.component.scss'
+  styleUrl: './details.component.scss',
 })
-export class DetailsComponent {
-
+export class DetailsComponent implements OnInit {
+  constructor(private breadcrumbService: BreadcrumbService) {}
+  ngOnInit(): void {
+    this.breadcrumbService.titleChanged$.next(
+      'Müasir İT Texnologiyaları: Yeni Trendlər və Çözümlər'
+    );
+  }
 }

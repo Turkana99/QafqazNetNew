@@ -20,48 +20,14 @@ export interface Breadcrumb {
   styleUrl: './breadcrumb.component.scss',
 })
 export class BreadcrumbComponent implements OnInit {
-  constructor(private router: Router, private destroyRef: DestroyRef) {}
+  constructor(
+    private destroyRef: DestroyRef,
+    private breadcrumbService: BreadcrumbService
+  ) {}
 
-  breadCrumb$ = new Observable<{name:string;path:string}[]>();
+  breadCrumb$ = new Observable<{ name: string; path: string }[]>();
 
   ngOnInit(): void {
-    this.breadCrumb$ = this.router.events.pipe(
-      takeUntilDestroyed(this.destroyRef),
-      filter((event) => event instanceof NavigationEnd),
-      map(() => {
-        return this.createBreadcrumb(this.router.routerState.root.snapshot);
-      })
-    );
-  }
-
-  createBreadcrumb(
-    route: ActivatedRouteSnapshot
-  ): { name: string; path: string }[] {
-    const breadcrumbs: { name: string; path: string }[] = [];
-
-    function traverse(
-      snapshot: ActivatedRouteSnapshot,
-      parentPath: string = ''
-    ) {
-      if (snapshot.data?.['breadcrumb'] && snapshot.routeConfig?.path) {
-        const currentPath =
-          parentPath +
-          '/' +
-          (Object.values(snapshot.params).join('') ||
-            snapshot.routeConfig.path);
-        breadcrumbs.push({
-          name: snapshot.data['breadcrumb'],
-          path: currentPath,
-        });
-        parentPath = currentPath; // Update parentPath for the next level
-      }
-
-      if (snapshot.children?.length) {
-        traverse(snapshot.children[0], parentPath);
-      }
-    }
-
-    traverse(route);
-    return breadcrumbs;
+    this.breadCrumb$ = this.breadcrumbService.breadCrumb$;
   }
 }

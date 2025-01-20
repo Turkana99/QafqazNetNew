@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BreadcrumbService } from '../../../../core/services/breadcrumb.service';
 
 @Component({
   selector: 'app-details',
@@ -7,8 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private breadcrumbService: BreadcrumbService) {}
   ngOnInit(): void {
-    // this.route.snapshot.data['breadcrumb'] = 'test';
+    this.breadcrumbService.titleChanged$.next(
+      'Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq'
+    );
   }
 }
