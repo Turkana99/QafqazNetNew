@@ -8,7 +8,9 @@ import { BreadcrumbService } from '../../../../core/services/breadcrumb.service'
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
+  requestSent = false;
   constructor(private breadcrumbService: BreadcrumbService) {}
+
   ngOnInit(): void {
     this.breadcrumbService.titleChanged$.next(
       'Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq'

@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './list.component.scss',
 })
 export class ListComponent {
+
+  requestSent = false
   data = [
     {
       id: 1,

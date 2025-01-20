@@ -3,6 +3,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CompanyRoutingModule } from './company-routing.module';
 import { CompanyComponent } from './company.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,6 @@ import { CompanyComponent } from './company.component';
     AboutComponent,
     ContactComponent,
   ],
-  imports: [CompanyRoutingModule],
+  imports: [CompanyRoutingModule, CommonModule],
 })
 export class CompanyModule {}

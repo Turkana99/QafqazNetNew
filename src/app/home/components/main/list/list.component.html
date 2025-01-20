@@ -69,24 +69,24 @@
 
 <section class="container our-experience">
   <h4>Təcrübəmiz</h4>
-  <ul class="w-100 list-unstyled d-flex justify-content-between">
-    <li class="experience-item">
+  <ul class="w-100 list-unstyled row d-flex justify-content-lg-between">
+    <li class="experience-item col-4 col-lg-auto">
       <h1>100+</h1>
       <p>Müştəri</p>
     </li>
-    <li class="experience-item">
+    <li class="experience-item col-4 col-lg-auto">
       <h1>50+</h1>
       <p>Əməkdaş</p>
     </li>
-    <li class="experience-item">
+    <li class="experience-item col-4 col-lg-auto">
       <h1>45+</h1>
       <p>Xidmət</p>
     </li>
-    <li class="experience-item">
+    <li class="experience-item col-4 col-lg-auto">
       <h1>165+</h1>
       <p>Layihə</p>
     </li>
-    <li class="experience-item">
+    <li class="experience-item col-4 col-lg-auto">
       <h1>10 illik</h1>
       <p>Təcrübə</p>
     </li>
@@ -196,7 +196,7 @@
   </div>
   <div class="row g-4">
     <div class="col-lg-4">
-      <div class="news-card">
+      <div class="news-card" [routerLink]="['company', 'news', 1]">
         <div class="news-card-wrapper">
           <h5 class="m-0">Yeni Layihəmiz Uğurla Tamamlandı</h5>
           <p>
@@ -214,7 +214,7 @@
       </div>
     </div>
     <div class="col-lg-4">
-      <div class="news-card">
+      <div class="news-card" [routerLink]="['company', 'news', 1]">
         <div class="news-card-wrapper">
           <h5 class="m-0">QafqazNet Beynəlxalq Tədbirdə İştirak Etdi</h5>
           <p>
@@ -231,7 +231,7 @@
       </div>
     </div>
     <div class="col-lg-4">
-      <div class="news-card">
+      <div class="news-card" [routerLink]="['company', 'news', 1]">
         <div class="news-card-wrapper">
           <h5 class="m-0">Bizneslər üçün Yeni Kiber Təhlükəsizlik Xidməti!</h5>
           <p>

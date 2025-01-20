@@ -3,9 +3,8 @@
 </section>
 
 <section class="container contact-us">
-  <h5 class="mb-5">Müraciət edin</h5>
   <div class="row mb-3">
-    <form class="col-lg-6 row">
+    <form class="col-lg-6 row" *ngIf="!requestSent">
       <div class="col-6 mb-3">
         <label class="form-label"
           >Ad, soyad <span class="required-mark">*</span></label
@@ -51,6 +50,13 @@
         <textarea class="form-control" rows="3"></textarea>
       </div>
     </form>
+    <div class="request-sent col-lg-6 h-100" *ngIf="requestSent">
+      <img src="assets/images/send-email.png" alt="" />
+      <div class="content">
+        <h5>Müraciətiniz göndərildi!</h5>
+        <p>Qısa zamanda sizinlə əlaqə saxlayacağıq.</p>
+      </div>
+    </div>
     <div class="d-none d-lg-block col-6">
       <div class="contact-details w-100 h-100">
         <ul class="list-unstyled m-0">
@@ -75,7 +81,12 @@
     </div>
   </div>
   <div class="col-3">
-    <button class="w-100 send-button" type="button">
+    <button
+      *ngIf="!requestSent"
+      class="w-100 send-button"
+      type="button"
+      (click)="requestSent = true"
+    >
       <span>Göndər</span><i class="fa-solid fa-arrow-right"></i>
     </button>
   </div>

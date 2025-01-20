@@ -1,104 +1,115 @@
 <section class="container main">
-    <h4 class="mb-5">Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq</h4>
-    <div class="d-flex align-items-center wrapper">
-      <ul>
-        <li>
-          Kiber Təhlükəsizlik Həlləri (Cybersecurity Solutions): Təhlükəsizlik
-          infrastrukturu, antivirus və antimalware, firewall, şəbəkə
-          təhlükəsizliyi, məlumatların təhlükəsizliyinin təmin olunması.
-        </li>
-        <li>
-          Backup həllər (Backup Solutions): Məlumatların təhlükəsizliyini təmin
-          edilməsi.
-        </li>
-        <li>
-          İT Audit (IT Audit): Şirkətinizin İT infrastruktur, təhlükəsizlik və
-          məlumat idarəetmə sistemlərinin yoxlanması.
-        </li>
-        <li>
-          Əməkdaşların Kibertəhlükəsizlik və İnformasiya təhlükəsizliyi ilə bağlı
-          maarifləndirilməsi.
-        </li>
-      </ul>
-    </div>
-  </section>
-  
-  <section class="container contact-us">
-    <h5 class="mb-5">Müraciət edin</h5>
-    <div class="row mb-3">
-      <form class="col-lg-6 row">
-        <div class="col-6 mb-3">
-          <label class="form-label"
-            >Ad, soyad <span class="required-mark">*</span></label
-          >
-          <input type="email" class="form-control" />
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label"
-            >E-poçt <span class="required-mark">*</span></label
-          >
-          <input type="email" class="form-control" />
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label"
-            >Əlaqə nömrəsi <span class="required-mark">*</span></label
-          >
-          <input type="email" class="form-control" />
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label">Şirkət</label>
-          <input type="email" class="form-control" />
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label">Maraqlandığınız xidmət</label>
-          <select class="form-select">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label">Maraqlandığınız məhsul</label>
-          <select class="form-select">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="col-12">
-          <label class="form-label"
-            >Mesaj <span class="required-mark">*</span></label
-          >
-          <textarea class="form-control" rows="3"></textarea>
-        </div>
-      </form>
-      <div class="d-none d-lg-block col-6">
-        <div class="contact-details w-100 h-100">
-          <ul class="list-unstyled m-0">
-            <li>
-              <p>Telefon</p>
-              <a href="tel:+994123100707">+994 12 310 07 07</a>
-            </li>
-            <li>
-              <p>E-poçt</p>
-              <a href="mailto:office@qafqaz.net">office&#64;qafqaz.net</a>
-            </li>
-            <li>
-              <p>Ünvan</p>
-              <a
-                href="https://www.google.com/maps/place/43+Ziya+B%C3%BCnyadov,+Baku+1000/@40.4160928,49.8553914,17z/data=!4m15!1m8!3m7!1s0x403087fe7f624381:0x1e0ad269f8b43d3!2s43+Ziya+B%C3%BCnyadov,+Baku+1000!3b1!8m2!3d40.4160887!4d49.8579663!16s%2Fg%2F11fdxd9gpn!3m5!1s0x403087fe7f624381:0x1e0ad269f8b43d3!8m2!3d40.4160887!4d49.8579663!16s%2Fg%2F11fdxd9gpn?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                >Z. Bünyadov pr. 43, Baku, Azerbaijan 1068</a
-              >
-            </li>
-          </ul>
-        </div>
+  <h4 class="mb-5">Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq</h4>
+  <div class="d-flex align-items-center wrapper">
+    <ul>
+      <li>
+        Kiber Təhlükəsizlik Həlləri (Cybersecurity Solutions): Təhlükəsizlik
+        infrastrukturu, antivirus və antimalware, firewall, şəbəkə
+        təhlükəsizliyi, məlumatların təhlükəsizliyinin təmin olunması.
+      </li>
+      <li>
+        Backup həllər (Backup Solutions): Məlumatların təhlükəsizliyini təmin
+        edilməsi.
+      </li>
+      <li>
+        İT Audit (IT Audit): Şirkətinizin İT infrastruktur, təhlükəsizlik və
+        məlumat idarəetmə sistemlərinin yoxlanması.
+      </li>
+      <li>
+        Əməkdaşların Kibertəhlükəsizlik və İnformasiya təhlükəsizliyi ilə bağlı
+        maarifləndirilməsi.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="container contact-us">
+  <h5 class="mb-5">Müraciət edin</h5>
+  <div class="row mb-3">
+    <form class="col-lg-6 row" *ngIf="!requestSent">
+      <div class="col-6 mb-3">
+        <label class="form-label"
+          >Ad, soyad <span class="required-mark">*</span></label
+        >
+        <input type="email" class="form-control" />
+      </div>
+      <div class="col-6 mb-3">
+        <label class="form-label"
+          >E-poçt <span class="required-mark">*</span></label
+        >
+        <input type="email" class="form-control" />
+      </div>
+      <div class="col-6 mb-3">
+        <label class="form-label"
+          >Əlaqə nömrəsi <span class="required-mark">*</span></label
+        >
+        <input type="email" class="form-control" />
+      </div>
+      <div class="col-6 mb-3">
+        <label class="form-label">Şirkət</label>
+        <input type="email" class="form-control" />
+      </div>
+      <div class="col-6 mb-3">
+        <label class="form-label">Maraqlandığınız xidmət</label>
+        <select class="form-select">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-6 mb-3">
+        <label class="form-label">Maraqlandığınız məhsul</label>
+        <select class="form-select">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label class="form-label"
+          >Mesaj <span class="required-mark">*</span></label
+        >
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+    </form>
+    <div class="request-sent col-lg-6 h-100" *ngIf="requestSent">
+      <img src="assets/images/send-email.png" alt="" />
+      <div class="content">
+        <h5>Müraciətiniz göndərildi!</h5>
+        <p>Qısa zamanda sizinlə əlaqə saxlayacağıq.</p>
       </div>
     </div>
-    <div class="col-3">
-      <button class="w-100 send-button" type="button">
-        <span>Göndər</span><i class="fa-solid fa-arrow-right"></i>
-      </button>
+    <div class="d-none d-lg-block col-6">
+      <div class="contact-details w-100 h-100">
+        <ul class="list-unstyled m-0">
+          <li>
+            <p>Telefon</p>
+            <a href="tel:+994123100707">+994 12 310 07 07</a>
+          </li>
+          <li>
+            <p>E-poçt</p>
+            <a href="mailto:office@qafqaz.net">office&#64;qafqaz.net</a>
+          </li>
+          <li>
+            <p>Ünvan</p>
+            <a
+              href="https://www.google.com/maps/place/43+Ziya+B%C3%BCnyadov,+Baku+1000/@40.4160928,49.8553914,17z/data=!4m15!1m8!3m7!1s0x403087fe7f624381:0x1e0ad269f8b43d3!2s43+Ziya+B%C3%BCnyadov,+Baku+1000!3b1!8m2!3d40.4160887!4d49.8579663!16s%2Fg%2F11fdxd9gpn!3m5!1s0x403087fe7f624381:0x1e0ad269f8b43d3!8m2!3d40.4160887!4d49.8579663!16s%2Fg%2F11fdxd9gpn?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              >Z. Bünyadov pr. 43, Baku, Azerbaijan 1068</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-  </section>
-  
+  </div>
+  <div class="col-3" *ngIf="!requestSent">
+    <button
+      class="w-100 send-button"
+      type="button"
+      *ngIf="!requestSent"
+      (click)="requestSent = true"
+    >
+      <span>Göndər</span><i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</section>
