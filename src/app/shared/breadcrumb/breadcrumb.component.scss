@@ -8,6 +8,7 @@ section {
   text-decoration: none;
   font-weight: 200;
   font-size: 14px;
+  white-space: nowrap;
 
   &:not(&:last-child):hover {
     color: #17d386;
