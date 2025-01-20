@@ -1,23 +1,31 @@
 <footer class="container">
   <div class="row justify-content-between top">
-    <div class="col-6 d-flex justify-content-between">
-      <div class="img-wrapper">
+    <div class="row col-12 col-lg-6 d-flex justify-content-between">
+      <div class="mb-5 m-lg-0 col-12 col-lg-4 img-wrapper">
         <img src="assets/images/qn-logo.svg" alt="" />
       </div>
-      <ul class="list-unstyled">
-        <li><a [routerLink]="['home']">Ana səhifə</a></li>
-        <li><a [routerLink]="['home', 'services']">Xidmətlər</a></li>
-        <li><a [routerLink]="['home', 'products']">Məhsullar</a></li>
-      </ul>
-      <ul class="list-unstyled">
-        <li><a [routerLink]="['home', 'company', 'about']">Haqqımızda</a></li>
-        <li><a [routerLink]="['home', 'company', 'contact']">Əlaqə</a></li>
-        <li><a [routerLink]="['home', 'blog']">Bloq</a></li>
-        <li><a [routerLink]="['home', 'company', 'news']">Xəbərlər</a></li>
+      <ul class="col-12 col-lg-8 list-unstyled row gy-2">
+        <li class="col-6"><a [routerLink]="['home']">Ana səhifə</a></li>
+        <li class="col-6">
+          <a [routerLink]="['home', 'company', 'contact']">Əlaqə</a>
+        </li>
+        <li class="col-6">
+          <a [routerLink]="['home', 'services']">Xidmətlər</a>
+        </li>
+        <li class="col-6">
+          <a [routerLink]="['home', 'company', 'news']">Xəbərlər</a>
+        </li>
+        <li class="col-6">
+          <a [routerLink]="['home', 'products']">Məhsullar</a>
+        </li>
+        <li class="col-6"><a [routerLink]="['home', 'blog']">Bloq</a></li>
+        <li class="col-6">
+          <a [routerLink]="['home', 'company', 'about']">Haqqımızda</a>
+        </li>
       </ul>
     </div>
-    <div class="col-6 d-flex justify-content-end">
-      <ul class="list-unstyled">
+    <div class="mt-5 m-lg-0 col-12 col-lg-6 d-flex justify-content-lg-end row">
+      <ul class="col-12 row list-unstyled">
         <li>Telefon: +994 12 310 07 07</li>
         <li>E-poçt: office&#64;qafqaz.net</li>
         <li>Ünvan: Z. Bünyadov pr. 43, Baku, Azerbaijan 1068</li>

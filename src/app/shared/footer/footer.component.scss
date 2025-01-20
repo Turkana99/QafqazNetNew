@@ -6,12 +6,20 @@ a {
   text-decoration: none;
 }
 
-.top ul {
+.info-ul {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
   font-weight: 200;
+}
+
+.top ul {
+  margin: 0;
+  font-weight: 200;
+  li {
+    white-space: nowrap;
+  }
 }
 
 .top,
