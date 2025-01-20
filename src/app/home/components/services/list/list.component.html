@@ -1,133 +1,132 @@
 <section class="container main">
-    <h4 class="mb-5">Xidmətlər</h4>
-    <div class="d-flex align-items-center wrapper">
-      <div>
-        <p class="mb-4">
-          Hər bir biznes, ölçüsündən asılı olmayaraq, etibarlı İT sisteminə
-          ehtiyac duyur ki, bu da əməliyyatların davamlılığını təmin edir və
-          məhsuldarlığı artırır. QafqazNet olaraq biz qurumlara tam İT dəstək və
-          həllər təklif edirik.
+  <h4 class="mb-5">Xidmətlər</h4>
+  <div class="d-flex align-items-center wrapper">
+    <div>
+      <p class="mb-4">
+        Hər bir biznes, ölçüsündən asılı olmayaraq, etibarlı İT sisteminə
+        ehtiyac duyur ki, bu da əməliyyatların davamlılığını təmin edir və
+        məhsuldarlığı artırır. QafqazNet olaraq biz qurumlara tam İT dəstək və
+        həllər təklif edirik.
+      </p>
+      <button class="custom-button">
+        <i class="fa-regular fa-eye"></i>
+        Broşuraya bax
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="container who-can-benefit">
+  <h4 class="mb-5">Kimlər faydalana bilər?</h4>
+  <div class="w-100 d-flex justify-content-between align-items-center">
+    <ul>
+      <li>Kiçik və Orta Müəssisələr (KOM)</li>
+      <li>Pərakəndə Satış Şəbəkələri</li>
+      <li>İstehsalat Şirkətləri</li>
+      <li>Səhiyyə Qurumları</li>
+      <li>Maliyyə İnstitutları</li>
+      <li>Təhsil Müəssisələri</li>
+      <li>Dövlət və İctimai Sektor Təşkilatları</li>
+      <li>Qeyri-Kommersiya Təşkilatlar</li>
+    </ul>
+    <img src="assets/images/advertising-megaphone.svg" alt="" />
+  </div>
+</section>
+
+<section class="container our-services">
+  <div class="w-100 d-flex justify-content-between align-items-center mb-4">
+    <h4>Xidmətlərimiz</h4>
+  </div>
+  <div class="row g-4">
+    <div class="col-4" [routerLink]="[1]">
+      <div class="service-card">
+        <i class="fa-regular fa-message"></i>
+        <h5 class="m-0">IT Konsaltinq</h5>
+        <p>
+          Texnologiya investisiyalarınızı maksimuma çatdırmaq üçün mürəkkəb İT
+          mühitində ekspert rəhbərliyi əldə edin.
         </p>
-        <button class="custom-button">
-          <i class="fa-regular fa-eye"></i>
-          Broşuraya bax
-        </button>
       </div>
     </div>
-  </section>
-  
-  <section class="container who-can-benefit">
-    <h4 class="mb-5">Kimlər faydalana bilər?</h4>
-    <div class="w-100 d-flex justify-content-between align-items-center">
-      <ul>
-        <li>Kiçik və Orta Müəssisələr (KOM)</li>
-        <li>Pərakəndə Satış Şəbəkələri</li>
-        <li>İstehsalat Şirkətləri</li>
-        <li>Səhiyyə Qurumları</li>
-        <li>Maliyyə İnstitutları</li>
-        <li>Təhsil Müəssisələri</li>
-        <li>Dövlət və İctimai Sektor Təşkilatları</li>
-        <li>Qeyri-Kommersiya Təşkilatlar</li>
-      </ul>
-      <img src="assets/images/advertising-megaphone.svg" alt="" />
-    </div>
-  </section>
-  
-  <section class="container our-services">
-    <div class="w-100 d-flex justify-content-between align-items-center mb-4">
-      <h4>Xidmətlərimiz</h4>
-    </div>
-    <div class="row g-4">
-      <div class="col-4" [routerLink]="['/services', 1]">
-        <div class="service-card">
-          <i class="fa-regular fa-message"></i>
-          <h5 class="m-0">IT Konsaltinq</h5>
-          <p>
-            Texnologiya investisiyalarınızı maksimuma çatdırmaq üçün mürəkkəb İT
-            mühitində ekspert rəhbərliyi əldə edin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[2]">
-        <div class="service-card">
-          <i class="fa-solid fa-globe"></i>
-          <h5 class="m-0">İnfrastruktur və Şəbəkə</h5>
-          <p>
-            Şəbəkə performansınızı optimallaşdırmaq üçün təhlükəsiz, çevik və
-            etibarlı İT infrastrukturu dizayn edin və tətbiq edin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[3]">
-        <div class="service-card">
-          <i class="fa-solid fa-cloud-arrow-up"></i>
-          <h5 class="m-0">Bulud Texnologiyaları</h5>
-          <p>
-            Biznes ehtiyaclarınıza uyğunlaşdırılmış miqyaslana bilən bulud həlləri
-            ilə əməliyyatlarınızı təkmilləşdirin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[4]">
-        <div class="service-card">
-          <i class="fa-solid fa-database"></i>
-          <h5 class="m-0">Verilənlər Bazası və İnformasiya İdarəetməsi</h5>
-          <p>
-            Effektiv verilənlər bazası həlləri və informasiya idarəetməsi
-            xidmətləri ilə məlumat əməliyyatlarınızı səmərələşdirin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[5]">
-        <div class="service-card">
-          <i class="fa-solid fa-lock"></i>
-          <h5 class="m-0">Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq</h5>
-          <p>
-            Təşkilatınızı güclü kiber təhlükəsizlik strategiyaları ilə qoruyun və
-            İT standartlarına uyğunluğu təmin edin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[6]">
-        <div class="service-card">
-          <i class="fa-solid fa-code"></i>
-          <h5 class="m-0">Proqram Təminatı</h5>
-          <p>
-            Fikirlərinizi xüsusi proqram təminatı xidmətlərimizlə reallığa
-            çevirin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[7]">
-        <div class="service-card">
-          <i class="fa-solid fa-server"></i>
-          <h5 class="m-0">Hosting və Veb Xidmətləri</h5>
-          <p>
-            Etibarlı hosting həlləri və hərtərəfli veb xidmətlərimizlə onlayn
-            mövcudluğunuzu gücləndirin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[8]">
-        <div class="service-card">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-          <h5 class="m-0">Dizayn və Vizualizasiya</h5>
-          <p>
-            Yaradıcı dizayn və vizualizasiya həllərimizlə konseptlərinizi həyata
-            keçirin.
-          </p>
-        </div>
-      </div>
-      <div class="col-4" [routerLink]="[9]">
-        <div class="service-card">
-          <i class="fa-solid fa-gears"></i>
-          <h5 class="m-0">Texniki Dəstək</h5>
-          <p>
-            İT sistemlərinizin fasiləsiz işləməsini təmin etmək üçün xüsusi
-            texniki dəstək xidmətlərimizdən yararlanın.
-          </p>
-        </div>
+    <div class="col-4" [routerLink]="[2]">
+      <div class="service-card">
+        <i class="fa-solid fa-globe"></i>
+        <h5 class="m-0">İnfrastruktur və Şəbəkə</h5>
+        <p>
+          Şəbəkə performansınızı optimallaşdırmaq üçün təhlükəsiz, çevik və
+          etibarlı İT infrastrukturu dizayn edin və tətbiq edin.
+        </p>
       </div>
     </div>
-  </section>
-  
+    <div class="col-4" [routerLink]="[3]">
+      <div class="service-card">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <h5 class="m-0">Bulud Texnologiyaları</h5>
+        <p>
+          Biznes ehtiyaclarınıza uyğunlaşdırılmış miqyaslana bilən bulud həlləri
+          ilə əməliyyatlarınızı təkmilləşdirin.
+        </p>
+      </div>
+    </div>
+    <div class="col-4" [routerLink]="[4]">
+      <div class="service-card">
+        <i class="fa-solid fa-database"></i>
+        <h5 class="m-0">Verilənlər Bazası və İnformasiya İdarəetməsi</h5>
+        <p>
+          Effektiv verilənlər bazası həlləri və informasiya idarəetməsi
+          xidmətləri ilə məlumat əməliyyatlarınızı səmərələşdirin.
+        </p>
+      </div>
+    </div>
+    <div class="col-4" [routerLink]="[5]">
+      <div class="service-card">
+        <i class="fa-solid fa-lock"></i>
+        <h5 class="m-0">Kiber Təhlükəsizlik və İT Standartlarına Uyğunluq</h5>
+        <p>
+          Təşkilatınızı güclü kiber təhlükəsizlik strategiyaları ilə qoruyun və
+          İT standartlarına uyğunluğu təmin edin.
+        </p>
+      </div>
+    </div>
+    <div class="col-4" [routerLink]="[6]">
+      <div class="service-card">
+        <i class="fa-solid fa-code"></i>
+        <h5 class="m-0">Proqram Təminatı</h5>
+        <p>
+          Fikirlərinizi xüsusi proqram təminatı xidmətlərimizlə reallığa
+          çevirin.
+        </p>
+      </div>
+    </div>
+    <div class="col-4" [routerLink]="[7]">
+      <div class="service-card">
+        <i class="fa-solid fa-server"></i>
+        <h5 class="m-0">Hosting və Veb Xidmətləri</h5>
+        <p>
+          Etibarlı hosting həlləri və hərtərəfli veb xidmətlərimizlə onlayn
+          mövcudluğunuzu gücləndirin.
+        </p>
+      </div>
+    </div>
+    <div class="col-4" [routerLink]="[8]">
+      <div class="service-card">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h5 class="m-0">Dizayn və Vizualizasiya</h5>
+        <p>
+          Yaradıcı dizayn və vizualizasiya həllərimizlə konseptlərinizi həyata
+          keçirin.
+        </p>
+      </div>
+    </div>
+    <div class="col-4" [routerLink]="[9]">
+      <div class="service-card">
+        <i class="fa-solid fa-gears"></i>
+        <h5 class="m-0">Texniki Dəstək</h5>
+        <p>
+          İT sistemlərinizin fasiləsiz işləməsini təmin etmək üçün xüsusi
+          texniki dəstək xidmətlərimizdən yararlanın.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

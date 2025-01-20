@@ -11,7 +11,7 @@
       <ul class="list-unstyled m-0 d-flex align-items-center">
         <li>
           <a
-            routerLink="main"
+            [routerLink]="['home']"
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="router-link-active"
             >Ana səhifə</a
@@ -19,7 +19,7 @@
         </li>
         <li>
           <a
-            routerLink="services"
+            [routerLink]="['home', 'services']"
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="router-link-active"
             >Xidmətlər</a
@@ -27,7 +27,7 @@
         </li>
         <li>
           <a
-            routerLink="products"
+            [routerLink]="['home', 'products']"
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="router-link-active"
             >Məhsullar</a
@@ -42,20 +42,20 @@
           >
 
           <mat-menu #menu2="matMenu" class="route-menu">
-            <button mat-menu-item [routerLink]="['company', 'about']">
+            <button mat-menu-item [routerLink]="['home', 'company', 'about']">
               <span>Haqqımızda</span>
             </button>
-            <button mat-menu-item [routerLink]="['company', 'contact']">
+            <button mat-menu-item [routerLink]="['home', 'company', 'contact']">
               <span>Əlaqə</span>
             </button>
-            <button mat-menu-item [routerLink]="['company', 'news']">
+            <button mat-menu-item [routerLink]="['home', 'company', 'news']">
               <span>Xəbərlər</span>
             </button>
           </mat-menu>
         </li>
         <li>
           <a
-            routerLink="blog"
+            [routerLink]="['home', 'blog']"
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="router-link-active"
             >Bloq</a

@@ -5,15 +5,15 @@
         <img src="assets/images/qn-logo.svg" alt="" />
       </div>
       <ul class="list-unstyled">
-        <li><a routerLink="/main">Ana səhifə</a></li>
-        <li><a routerLink="/services">Xidmətlər</a></li>
-        <li><a routerLink="/products">Məhsullar</a></li>
+        <li><a [routerLink]="['home']">Ana səhifə</a></li>
+        <li><a [routerLink]="['home', 'services']">Xidmətlər</a></li>
+        <li><a [routerLink]="['home', 'products']">Məhsullar</a></li>
       </ul>
       <ul class="list-unstyled">
-        <li><a routerLink="company/about">Haqqımızda</a></li>
-        <li><a routerLink="company/contact">Əlaqə</a></li>
-        <li><a routerLink="/blog">Bloq</a></li>
-        <li><a routerLink="company/news">Xəbərlər</a></li>
+        <li><a [routerLink]="['home', 'company', 'about']">Haqqımızda</a></li>
+        <li><a [routerLink]="['home', 'company', 'contact']">Əlaqə</a></li>
+        <li><a [routerLink]="['home', 'blog']">Bloq</a></li>
+        <li><a [routerLink]="['home', 'company', 'news']">Xəbərlər</a></li>
       </ul>
     </div>
     <div class="col-6 d-flex justify-content-end">

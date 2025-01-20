@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) {}
   isCompanyRouteActive(): boolean {
-    return this.router.url.startsWith('/company');
+    const bool = this.router.url.startsWith('/home/company');
+    return bool;
   }
 }

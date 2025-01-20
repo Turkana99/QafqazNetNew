@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrl: './details.component.scss'
+  styleUrl: './details.component.scss',
 })
-export class DetailsComponent {
-
+export class DetailsComponent implements OnInit {
+  constructor(private route: ActivatedRoute) {}
+  ngOnInit(): void {
+    // this.route.snapshot.data['breadcrumb'] = 'test';
+  }
 }

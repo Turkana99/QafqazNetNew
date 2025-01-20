@@ -1,13 +1,21 @@
 section {
-  font-weight: 100;
-  font-size: 14px;
-  color: white !important;
-  a {
-    text-decoration: none;
-    color: white;
+  gap: 12px;
+  user-select: none;
+}
 
-    &:not(.active):hover {
-      color: #17d386;
-    }
+.breadcrumb-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 14px;
+
+  &:not(&:last-child):hover {
+    color: #17d386;
   }
+}
+
+span {
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
 }

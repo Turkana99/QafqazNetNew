@@ -1,4 +1,13 @@
-<section class="container mt-5 mb-4">
-  <a href="#" routerLink="/main">Ana səhifə </a>/
-  <a href="#" class="active">Xidmətlər</a>
+<section class="container d-flex mt-5 mb-4">
+  <ng-container *ngIf="this.breadCrumb$ | async as breadCrumbs">
+    <ng-container *ngFor="let item of breadCrumbs; index as i">
+      <a
+        *ngIf="breadCrumbs.length > 1"
+        class="breadcrumb-link"
+        [routerLink]="item.path"
+        >{{ item.name }}
+      </a>
+      <span *ngIf="i != breadCrumbs.length - 1">/</span>
+    </ng-container>
+  </ng-container>
 </section>
