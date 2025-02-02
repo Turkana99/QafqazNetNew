@@ -67,7 +67,7 @@
       class="col-lg-3 col-6 order-lg-3 order-2 lang-wrapper d-flex justify-content-end align-items-center"
     >
       <div class="d-flex align-items-center">
-        <label for="langBtn">AZ</label>
+        <label for="langBtn">{{ currentLang }}</label>
         <button
           id="langBtn"
           style="position: relative; right: 12px; color: white"
@@ -80,14 +80,12 @@
         </button>
       </div>
       <mat-menu #menu="matMenu" class="language-menu">
-        <button mat-menu-item>
-          <span>AZ</span>
-        </button>
-        <button mat-menu-item>
-          <span>EN</span>
-        </button>
-        <button mat-menu-item>
-          <span>RU</span>
+        <button
+          mat-menu-item
+          *ngFor="let item of data$ | async"
+          (click)="changeLanguage(item)"
+        >
+          <span styl>{{ item.displayName }}</span>
         </button>
       </mat-menu>
 

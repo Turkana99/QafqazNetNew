@@ -13,6 +13,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { PaginatorModule } from 'primeng/paginator';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { LanguageInterceptor } from './core/interceptors/language.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,13 @@ import { PaginatorModule } from 'primeng/paginator';
     MaterialModule,
     ButtonModule,
     PaginatorModule,
+    HttpClientModule,
   ],
-  providers: [provideClientHydration(), provideAnimationsAsync()],
+  providers: [
+    provideClientHydration(),
+    provideAnimationsAsync(),
+    { provide: HTTP_INTERCEPTORS, useClass: LanguageInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

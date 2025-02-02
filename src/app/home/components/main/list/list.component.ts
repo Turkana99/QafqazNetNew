@@ -1,11 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { HomepageService } from '../../../../core/services/homepage.service';
+import { forkJoin, map, Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrl: './list.component.scss'
+  styleUrl: './list.component.scss',
 })
 export class ListComponent implements OnInit {
+  constructor(private hpS: HomepageService) {}
+
+  data$ = new Observable<any>();
+
   responsiveOptions: any[] | undefined;
   private autoScrollInterval: any;
   ourCustomers: { image: string }[] = [
@@ -152,6 +159,10 @@ export class ListComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.data$ = this.hpS
+      .getAllData()
+      .pipe(tap((data) => console.log('data', data)));
+
     this.responsiveOptions = [
       {
         breakpoint: '1199px',
@@ -169,6 +180,7 @@ export class ListComponent implements OnInit {
         numScroll: 1,
       },
     ];
+
     this.startAutoScroll();
   }
 

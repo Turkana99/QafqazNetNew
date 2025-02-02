@@ -6,6 +6,4 @@ import { Router } from 'express';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'net';
-}
+export class AppComponent {}
